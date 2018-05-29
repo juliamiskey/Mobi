@@ -1,0 +1,271 @@
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+
+/*Red - #ed1e24
+Grey - #939393
+Light Grey - #f2f2f2
+Black - #1a1a1b
+Text Grey - #a09f9f*/
+
+/*General*/
+
+/*1. Trying using rems,
+html {
+	font-size:16px;
+}*/
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.3;
+	letter-spacing: 2px;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.container {
+	width: 85%;
+	margin: auto;
+	overflow: auto;
+	}
+
+.logo {
+	font-size: 38px;
+	font-weight: bold;
+	text-transform: lowercase;
+	color: #ed1e24;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 18px;
+	list-style: none;
+}
+
+.main .feature {
+	font-size: 19px;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #a09f9f;
+	border-bottom: 1px solid #a09f9f;
+}
+
+.main .text {
+	font-size: 33px;
+	font-weight: bold;
+	color: ##1a1a1b;
+}
+
+.main .seeMore {
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #ed1e24;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.main .wrapper {
+	position: relative;
+}
+
+/*	Header*/
+header {
+	background-image: url(../assets/breather-196130.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+	color: #ffffff;
+	padding-top: 10vh;
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+header li {
+	float: left;
+	padding: 0 10px 0 10px;
+}
+
+header .logo {
+	float:left;
+	margin: 0;
+}
+
+header nav {
+	float: right;
+}
+
+/*header .mainMenu*/ a:hover {
+	color: #ed1e24;
+}
+
+/*2. think of inception, try to not go more then 3 levels deep with your selector.*/
+/*try to be as general as possible, remember you might have to override in rewsponsive.*/
+
+header .mainMenu li:hover .sub-menu {
+	display: block;
+	text-transform: lowercase;
+}
+
+header .sub-menu {
+	display: none;
+}
+
+header .sub-menu li {
+	display: block;
+	float:none;
+}
+
+header h1 {
+	font-size: 60px;
+	color: #ffffff;
+	font-weight: 500;
+	margin-right: 40vw;
+	margin-top: 20vh;
+	margin-bottom: 20vh;
+}
+
+/*Main Section*/
+/*MORRRRREEE COMMENTS*/
+.main {
+	margin: 50px 0 40px;
+}
+
+.main .wrapper {
+	width: 100%;
+}
+
+.columnleft {
+	width: 62%;
+	float:left;
+}
+
+.columnright {
+	width: 25%;
+	float: left;
+	max-height: 200px;
+}
+
+.gallery {
+	margin: 10px;
+	/*border: 1px solid black;*/
+	min-height: 560px;
+	position: relative;
+	overflow: hidden;
+}
+
+.gallery img {
+	position: absolute;
+	bottom: 0;
+}
+.box1 {
+	text-align: right;
+	width: calc(50% - 20px);
+	float: left;
+	padding: 200px 20px 80px 0 ;
+}
+
+.image2 {
+	width: calc(50% - 20px);
+	float: left;
+}
+
+.box4 {
+	text-align: right;
+	background: #f2f2f2;
+	padding: 100px 20px 100px 400px;
+}
+
+.box7 {
+	background: #f2f2f2;
+	padding: 100px 0 100px 20px;
+}
+
+
+/*don't combine position absolute AND padding-top on .offset
+it's bad for your eyes
+- Winston*/
+
+/*img .small {
+		bottom:0;
+}*/
+
+
+/*Footer*/
+
+footer {
+	background: #f2f2f2;
+	padding: 30px;
+	line-height: 2;
+}
+
+footer .logo {
+	width: 30%;
+	float: left;
+	margin-top: 0;
+}
+
+footer .footerMenu {
+	width: 20%;
+	float: left;
+}
+
+footer .socialMedia {
+	width: 20%;
+	float: left;
+}
+
+footer a {
+	color: black;
+	text-decoration: none;
+}
+
+footer .footerblurb {
+	width: 30%;
+	float: left;
+}
+
+footer p {
+	margin: 0;
+	font-size: 16px;
+	color: #a09f9f;
+	line-height: 2;
+}
+
+footer .legal {
+	margin-top: 60px;
+	clear: both;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #a09f9f;
+	border-top: 1px solid #a09f9f;
+}
+
+/*this could have been done with percentage widths.*/
+footer .legal span {
+	margin-right: 220px;
+}
+
+footer .legal a {
+	text-decoration: none;
+	color: #a09f9f;
+}
+
+
